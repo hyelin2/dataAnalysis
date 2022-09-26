@@ -1,0 +1,1200 @@
+%% neuron-time(-1~1) plot 그리는 함수
+load P27.mat;
+units = P27.units;
+neuron_spike = P27.spiketimes(units);
+eventtime = P27.eventtimes;
+
+%  spiketime = neuron_spike{1,2};
+%     for n = 1:length(eventtime)
+%         Idx = find(spiketime>(eventtime(n)-1) & spiketime < eventtime(n));
+%         A2 = spiketime(Idx);
+%     end
+% 
+%     for n = 1:length(eventtime)
+%         Idx = find(spiketime>(eventtime(n)) & spiketime < eventtime(n)+1);
+%         B2 = spiketime(Idx);
+%     end
+%     result2 = [A2 B2];
+% %     C = rescale(result,-1,1);
+% 
+% 
+%      spiketime = neuron_spike{1,3};
+%     for n = 1:length(eventtime)
+%         Idx = find(spiketime>(eventtime(n)-1) & spiketime < eventtime(n));
+%         A3 = spiketime(Idx);
+%     end
+% 
+%     for n = 1:length(eventtime)
+%         Idx = find(spiketime>(eventtime(n)) & spiketime < eventtime(n)+1);
+%         B3 = spiketime(Idx);
+%     end
+%     result3 = [A3 B3];
+% %     D = rescale(result,-1,1);
+% 
+% 
+%  spiketime = neuron_spike{1,4};
+%     for n = 1:length(eventtime)
+%         Idx = find(spiketime>(eventtime(n)-1) & spiketime < eventtime(n));
+%         A4 = spiketime(Idx);
+%     end
+% 
+%     for n = 1:length(eventtime)
+%         Idx = find(spiketime>(eventtime(n)) & spiketime < eventtime(n)+1);
+%         B4 = spiketime(Idx);
+%     end
+%     result4 = [A4 B4];
+% %     E = rescale(result,-1,1);
+% 
+% 
+%      spiketime = neuron_spike{1,5};
+%     for n = 1:length(eventtime)
+%         Idx = find(spiketime>(eventtime(n)-1) & spiketime < eventtime(n));
+%         A5 = spiketime(Idx);
+%     end
+% 
+%     for n = 1:length(eventtime)
+%         Idx = find(spiketime>(eventtime(n)) & spiketime < eventtime(n)+1);
+%         B5 = spiketime(Idx);
+%     end
+%     result5 = [A5 B5];
+%     F = rescale(result,-1,1);
+   
+%     title("Neural Spike around Event")
+%     
+%      hold on
+%      plot(C)
+%      plot(D)
+%      plot(E)
+%      plot(F)
+% 
+%      figure
+%      grid on
+% xlim([-1 1])
+
+%% [eventtime(i)-1 < neuraldata < eventtime(i)+1] -->  
+% Trial 1
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(1)-1 & spiketime < eventtime(1));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(1) & spiketime < eventtime(1)+1);
+trialB = spiketime(Idx);
+end
+trial1 = [trialA trialB];
+trial1 = rescale(trial1,-1,1);
+
+
+% Trial 2
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(2)-1 & spiketime < eventtime(2));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(2) & spiketime < eventtime(2)+1);
+trialB = spiketime(Idx);
+end
+trial2 = [trialA trialB];
+trial2 = rescale(trial2,-1,1);
+
+
+% Trial 3
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(3)-1 & spiketime < eventtime(3));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(3) & spiketime < eventtime(3)+1);
+trialB = spiketime(Idx);
+end
+trial3 = [trialA trialB];
+trial3 = rescale(trial3,-1,1);
+
+
+% Trial 4
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(4)-1 & spiketime < eventtime(4));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(4) & spiketime < eventtime(4)+1);
+trialB = spiketime(Idx);
+end
+trial4 = [trialA trialB];
+trial4 = rescale(trial4,-1,1);
+
+
+% Trial 5
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(5)-1 & spiketime < eventtime(5));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(5) & spiketime < eventtime(5)+1);
+trialB = spiketime(Idx);
+end
+trial5 = [trialA trialB];
+trial5 = rescale(trial5,-1,1);
+
+% Trial 6
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(6)-1 & spiketime < eventtime(6));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(6) & spiketime < eventtime(6)+1);
+trialB = spiketime(Idx);
+end
+trial6 = [trialA trialB];
+trial6 = rescale(trial6,-1,1);
+
+
+% Trial 7
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(7)-1 & spiketime < eventtime(7));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(7) & spiketime < eventtime(7)+1);
+trialB = spiketime(Idx);
+end
+trial7 = [trialA trialB];
+trial7 = rescale(trial7,-1,1);
+
+
+% Trial 8
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(8)-1 & spiketime < eventtime(8));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(8) & spiketime < eventtime(8)+1);
+trialB = spiketime(Idx);
+end
+trial8 = [trialA trialB];
+trial8 = rescale(trial8,-1,1);
+
+% Trial 9
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(9)-1 & spiketime < eventtime(9));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(9) & spiketime < eventtime(9)+1);
+trialB = spiketime(Idx);
+end
+trial9 = [trialA trialB];
+trial9 = rescale(trial9,-1,1);
+
+
+% Trial 10
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(10)-1 & spiketime < eventtime(10));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(10) & spiketime < eventtime(10)+1);
+trialB = spiketime(Idx);
+end
+trial10 = [trialA trialB];
+trial10 = rescale(trial10,-1,1);
+
+% Trial 11
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(11)-1 & spiketime < eventtime(11));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(11) & spiketime < eventtime(11)+1);
+trialB = spiketime(Idx);
+end
+trial11 = [trialA trialB];
+trial11 = rescale(trial11,-1,1);
+
+
+% Trial 12
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(12)-1 & spiketime < eventtime(12));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(12) & spiketime < eventtime(12)+1);
+trialB = spiketime(Idx);
+end
+trial12 = [trialA trialB];
+trial12 = rescale(trial12,-1,1);
+
+
+% Trial 13
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(13)-1 & spiketime < eventtime(13));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(13) & spiketime < eventtime(13)+1);
+trialB = spiketime(Idx);
+end
+trial13 = [trialA trialB];
+trial13 = rescale(trial13,-1,1);
+
+% Trial 14
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(14)-1 & spiketime < eventtime(14));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(14) & spiketime < eventtime(14)+1);
+trialB = spiketime(Idx);
+end
+trial14 = [trialA trialB];
+trial14 = rescale(trial14,-1,1);
+
+% Trial 15
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(15)-1 & spiketime < eventtime(15));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(15) & spiketime < eventtime(15)+1);
+trialB = spiketime(Idx);
+end
+trial15 = [trialA trialB];
+trial15 = rescale(trial15,-1,1);
+
+% Trial 16
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(16)-1 & spiketime < eventtime(16));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(16) & spiketime < eventtime(16)+1);
+trialB = spiketime(Idx);
+end
+trial16 = [trialA trialB];
+trial16 = rescale(trial16,-1,1);
+
+% Trial 17
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(17)-1 & spiketime < eventtime(17));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(17) & spiketime < eventtime(17)+1);
+trialB = spiketime(Idx);
+end
+trial17 = [trialA trialB];
+trial17 = rescale(trial17,-1,1);
+
+% Trial 18
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(18)-1 & spiketime < eventtime(18));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(18) & spiketime < eventtime(18)+1);
+trialB = spiketime(Idx);
+end
+trial18 = [trialA trialB];
+trial18 = rescale(trial18,-1,1);
+
+% Trial 19
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(19)-1 & spiketime < eventtime(19));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(19) & spiketime < eventtime(19)+1);
+trialB = spiketime(Idx);
+end
+trial19 = [trialA trialB];
+trial19 = rescale(trial19,-1,1);
+
+% Trial 20
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(20)-1 & spiketime < eventtime(20));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(20) & spiketime < eventtime(20)+1);
+trialB = spiketime(Idx);
+end
+trial20 = [trialA trialB];
+trial20 = rescale(trial20,-1,1);
+
+% Trial 21
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(21)-1 & spiketime < eventtime(21));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(21) & spiketime < eventtime(21)+1);
+trialB = spiketime(Idx);
+end
+trial21 = [trialA trialB];
+trial21 = rescale(trial21,-1,1);
+
+% Trial 22
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(22)-1 & spiketime < eventtime(22));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(22) & spiketime < eventtime(22)+1);
+trialB = spiketime(Idx);
+end
+trial22 = [trialA trialB];
+trial22 = rescale(trial22,-1,1);
+
+% Trial 23
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(23)-1 & spiketime < eventtime(23));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(23) & spiketime < eventtime(23)+1);
+trialB = spiketime(Idx);
+end
+trial23 = [trialA trialB];
+trial23 = rescale(trial23,-1,1);
+
+% Trial 24
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(24)-1 & spiketime < eventtime(24));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(24) & spiketime < eventtime(24)+1);
+trialB = spiketime(Idx);
+end
+trial24 = [trialA trialB];
+trial24 = rescale(trial24,-1,1);
+
+% Trial 25
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(25)-1 & spiketime < eventtime(25));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(25) & spiketime < eventtime(25)+1);
+trialB = spiketime(Idx);
+end
+trial25 = [trialA trialB];
+trial25 = rescale(trial25,-1,1);
+
+% Trial 26
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(26)-1 & spiketime < eventtime(26));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(26) & spiketime < eventtime(26)+1);
+trialB = spiketime(Idx);
+end
+trial26 = [trialA trialB];
+trial26 = rescale(trial26,-1,1);
+
+% Trial 27
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(27)-1 & spiketime < eventtime(27));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(27) & spiketime < eventtime(27)+1);
+trialB = spiketime(Idx);
+end
+trial27 = [trialA trialB];
+trial27 = rescale(trial27,-1,1);
+
+% Trial 28
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(28)-1 & spiketime < eventtime(28));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(28) & spiketime < eventtime(28)+1);
+trialB = spiketime(Idx);
+end
+trial28 = [trialA trialB];
+trial28 = rescale(trial28,-1,1);
+
+% Trial 29
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(29)-1 & spiketime < eventtime(29));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(29) & spiketime < eventtime(29)+1);
+trialB = spiketime(Idx);
+end
+trial29 = [trialA trialB];
+trial29 = rescale(trial29,-1,1);
+
+% Trial 30
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(30)-1 & spiketime < eventtime(30));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(30) & spiketime < eventtime(30)+1);
+trialB = spiketime(Idx);
+end
+trial30 = [trialA trialB];
+trial30 = rescale(trial30,-1,1);
+
+
+% Trial 31
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(31)-1 & spiketime < eventtime(31));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(31) & spiketime < eventtime(31)+1);
+trialB = spiketime(Idx);
+end
+trial31 = [trialA trialB];
+trial31 = rescale(trial31,-1,1);
+
+% Trial 32
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(32)-1 & spiketime < eventtime(32));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(32) & spiketime < eventtime(32)+1);
+trialB = spiketime(Idx);
+end
+trial32 = [trialA trialB];
+trial32 = rescale(trial32,-1,1);
+
+% Trial 33
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(33)-1 & spiketime < eventtime(33));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(33) & spiketime < eventtime(33)+1);
+trialB = spiketime(Idx);
+end
+trial33 = [trialA trialB];
+trial33 = rescale(trial33,-1,1);
+
+% Trial 34
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(34)-1 & spiketime < eventtime(34));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(34) & spiketime < eventtime(34)+1);
+trialB = spiketime(Idx);
+end
+trial34 = [trialA trialB];
+trial34 = rescale(trial34,-1,1);
+
+% Trial 35
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(35)-1 & spiketime < eventtime(35));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(35) & spiketime < eventtime(35)+1);
+trialB = spiketime(Idx);
+end
+trial35 = [trialA trialB];
+trial35 = rescale(trial35,-1,1);
+
+% Trial 36
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(36)-1 & spiketime < eventtime(36));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(36) & spiketime < eventtime(36)+1);
+trialB = spiketime(Idx);
+end
+trial36 = [trialA trialB];
+trial36 = rescale(trial36,-1,1);
+
+% Trial 37
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(37)-1 & spiketime < eventtime(37));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(37) & spiketime < eventtime(37)+1);
+trialB = spiketime(Idx);
+end
+trial37 = [trialA trialB];
+trial37 = rescale(trial37,-1,1);
+
+% Trial 38
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(38)-1 & spiketime < eventtime(38));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(38) & spiketime < eventtime(38)+1);
+trialB = spiketime(Idx);
+end
+trial38 = [trialA trialB];
+trial38 = rescale(trial38,-1,1);
+
+% Trial 39
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(39)-1 & spiketime < eventtime(39));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(39) & spiketime < eventtime(39)+1);
+trialB = spiketime(Idx);
+end
+trial39 = [trialA trialB];
+trial39 = rescale(trial39,-1,1);
+
+% Trial 40
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(40)-1 & spiketime < eventtime(40));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(40) & spiketime < eventtime(40)+1);
+trialB = spiketime(Idx);
+end
+trial40 = [trialA trialB];
+trial40 = rescale(trial40,-1,1);
+
+% Trial 41
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(41)-1 & spiketime < eventtime(41));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(41) & spiketime < eventtime(41)+1);
+trialB = spiketime(Idx);
+end
+trial41 = [trialA trialB];
+trial41 = rescale(trial41,-1,1);
+
+% Trial 42
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(42)-1 & spiketime < eventtime(42));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(42) & spiketime < eventtime(42)+1);
+trialB = spiketime(Idx);
+end
+trial42 = [trialA trialB];
+trial42 = rescale(trial42,-1,1);
+
+% Trial 43
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(43)-1 & spiketime < eventtime(43));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(43) & spiketime < eventtime(43)+1);
+trialB = spiketime(Idx);
+end
+trial43 = [trialA trialB];
+trial43 = rescale(trial43,-1,1);
+
+% Trial 44
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(44)-1 & spiketime < eventtime(44));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(44) & spiketime < eventtime(44)+1);
+trialB = spiketime(Idx);
+end
+trial44 = [trialA trialB];
+trial44 = rescale(trial44,-1,1);
+
+% Trial 45
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(45)-1 & spiketime < eventtime(45));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(45) & spiketime < eventtime(45)+1);
+trialB = spiketime(Idx);
+end
+trial45 = [trialA trialB];
+trial45 = rescale(trial45,-1,1);
+
+% Trial 46
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(46)-1 & spiketime < eventtime(46));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(46) & spiketime < eventtime(46)+1);
+trialB = spiketime(Idx);
+end
+trial46 = [trialA trialB];
+trial46 = rescale(trial46,-1,1);
+
+% Trial 47
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(47)-1 & spiketime < eventtime(47));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(47) & spiketime < eventtime(47)+1);
+trialB = spiketime(Idx);
+end
+trial47 = [trialA trialB];
+trial47 = rescale(trial47,-1,1);
+
+% Trial 48
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(48)-1 & spiketime < eventtime(48));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(48) & spiketime < eventtime(48)+1);
+trialB = spiketime(Idx);
+end
+trial48 = [trialA trialB];
+trial48 = rescale(trial48,-1,1);
+
+% Trial 49
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(49)-1 & spiketime < eventtime(49));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(49) & spiketime < eventtime(49)+1);
+trialB = spiketime(Idx);
+end
+trial49 = [trialA trialB];
+trial49 = rescale(trial49,-1,1);
+
+% Trial 50
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(50)-1 & spiketime < eventtime(50));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(50) & spiketime < eventtime(50)+1);
+trialB = spiketime(Idx);
+end
+trial50 = [trialA trialB];
+trial50 = rescale(trial50,-1,1);
+
+% Trial 51
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(51)-1 & spiketime < eventtime(51));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(51) & spiketime < eventtime(51)+1);
+trialB = spiketime(Idx);
+end
+trial51 = [trialA trialB];
+trial51 = rescale(trial51,-1,1);
+
+% Trial 52
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(52)-1 & spiketime < eventtime(52));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(52) & spiketime < eventtime(52)+1);
+trialB = spiketime(Idx);
+end
+trial52 = [trialA trialB];
+trial52 = rescale(trial52,-1,1);
+
+% Trial 53
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(53)-1 & spiketime < eventtime(53));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(53) & spiketime < eventtime(53)+1);
+trialB = spiketime(Idx);
+end
+trial53 = [trialA trialB];
+trial53 = rescale(trial53,-1,1);
+
+% Trial 54
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(54)-1 & spiketime < eventtime(54));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(54) & spiketime < eventtime(54)+1);
+trialB = spiketime(Idx);
+end
+trial54 = [trialA trialB];
+trial54 = rescale(trial54,-1,1);
+
+% Trial 55
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(55)-1 & spiketime < eventtime(55));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(55) & spiketime < eventtime(55)+1);
+trialB = spiketime(Idx);
+end
+trial55 = [trialA trialB];
+trial55 = rescale(trial55,-1,1);
+
+% Trial 56
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(56)-1 & spiketime < eventtime(56));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(56) & spiketime < eventtime(56)+1);
+trialB = spiketime(Idx);
+end
+trial56 = [trialA trialB];
+trial56 = rescale(trial56,-1,1);
+
+% Trial 57
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(57)-1 & spiketime < eventtime(57));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(57) & spiketime < eventtime(57)+1);
+trialB = spiketime(Idx);
+end
+trial57 = [trialA trialB];
+trial57 = rescale(trial57,-1,1);
+
+% Trial 58
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(58)-1 & spiketime < eventtime(58));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(58) & spiketime < eventtime(58)+1);
+trialB = spiketime(Idx);
+end
+trial58 = [trialA trialB];
+trial58 = rescale(trial58,-1,1);
+
+% Trial 59
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(59)-1 & spiketime < eventtime(59));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(59) & spiketime < eventtime(59)+1);
+trialB = spiketime(Idx);
+end
+trial59 = [trialA trialB];
+trial59 = rescale(trial59,-1,1);
+
+% Trial 60
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(60)-1 & spiketime < eventtime(60));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(60) & spiketime < eventtime(60)+1);
+trialB = spiketime(Idx);
+end
+trial60 = [trialA trialB];
+trial60 = rescale(trial60,-1,1);
+
+% Trial 61
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(61)-1 & spiketime < eventtime(61));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(61) & spiketime < eventtime(61)+1);
+trialB = spiketime(Idx);
+end
+trial61 = [trialA trialB];
+trial61 = rescale(trial61,-1,1);
+
+% Trial 62
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(62)-1 & spiketime < eventtime(62));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(62) & spiketime < eventtime(62)+1);
+trialB = spiketime(Idx);
+end
+trial62 = [trialA trialB];
+trial62 = rescale(trial62,-1,1);
+
+% Trial 63
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(63)-1 & spiketime < eventtime(63));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(63) & spiketime < eventtime(63)+1);
+trialB = spiketime(Idx);
+end
+trial63 = [trialA trialB];
+trial63 = rescale(trial63,-1,1);
+
+% Trial 64
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(64)-1 & spiketime < eventtime(64));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(64) & spiketime < eventtime(64)+1);
+trialB = spiketime(Idx);
+end
+trial64 = [trialA trialB];
+trial64 = rescale(trial64,-1,1);
+
+% Trial 65
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(65)-1 & spiketime < eventtime(65));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(65) & spiketime < eventtime(65)+1);
+trialB = spiketime(Idx);
+end
+trial65 = [trialA trialB];
+trial65 = rescale(trial65,-1,1);
+
+% Trial 66
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(66)-1 & spiketime < eventtime(66));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(66) & spiketime < eventtime(66)+1);
+trialB = spiketime(Idx);
+end
+trial66 = [trialA trialB];
+trial66 = rescale(trial66,-1,1);
+
+% Trial 67
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(67)-1 & spiketime < eventtime(67));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(67) & spiketime < eventtime(67)+1);
+trialB = spiketime(Idx);
+end
+trial67 = [trialA trialB];
+trial67 = rescale(trial67,-1,1);
+
+% Trial 68
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(68)-1 & spiketime < eventtime(68));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(68) & spiketime < eventtime(68)+1);
+trialB = spiketime(Idx);
+end
+trial68 = [trialA trialB];
+trial68 = rescale(trial68,-1,1);
+
+% Trial 69
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(69)-1 & spiketime < eventtime(69));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(69) & spiketime < eventtime(69)+1);
+trialB = spiketime(Idx);
+end
+trial69 = [trialA trialB];
+trial69 = rescale(trial69,-1,1);
+
+% Trial 70
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(70)-1 & spiketime < eventtime(70));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(70) & spiketime < eventtime(70)+1);
+trialB = spiketime(Idx);
+end
+trial70 = [trialA trialB];
+trial70 = rescale(trial70,-1,1);
+
+% Trial 71
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(71)-1 & spiketime < eventtime(71));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(71) & spiketime < eventtime(71)+1);
+trialB = spiketime(Idx);
+end
+trial71 = [trialA trialB];
+trial71 = rescale(trial71,-1,1);
+
+% Trial 72
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(72)-1 & spiketime < eventtime(72));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(72) & spiketime < eventtime(72)+1);
+trialB = spiketime(Idx);
+end
+trial72 = [trialA trialB];
+trial72 = rescale(trial72,-1,1);
+
+% Trial 73
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(73)-1 & spiketime < eventtime(73));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(73) & spiketime < eventtime(73)+1);
+trialB = spiketime(Idx);
+end
+trial73 = [trialA trialB];
+trial73 = rescale(trial73,-1,1);
+
+% Trial 74
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(74)-1 & spiketime < eventtime(74));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(74) & spiketime < eventtime(74)+1);
+trialB = spiketime(Idx);
+end
+trial74 = [trialA trialB];
+trial74 = rescale(trial74,-1,1);
+
+% Trial 75
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(75)-1 & spiketime < eventtime(75));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(75) & spiketime < eventtime(75)+1);
+trialB = spiketime(Idx);
+end
+trial75 = [trialA trialB];
+trial75 = rescale(trial75,-1,1);
+
+% Trial 76
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(76)-1 & spiketime < eventtime(76));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(76) & spiketime < eventtime(76)+1);
+trialB = spiketime(Idx);
+end
+trial76 = [trialA trialB];
+trial76 = rescale(trial76,-1,1);
+
+
+% Trial 77
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(77)-1 & spiketime < eventtime(77));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(77) & spiketime < eventtime(77)+1);
+trialB = spiketime(Idx);
+end
+trial77 = [trialA trialB];
+trial77 = rescale(trial77,-1,1);
+
+% Trial 78
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(78)-1 & spiketime < eventtime(78));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(78) & spiketime < eventtime(78)+1);
+trialB = spiketime(Idx);
+end
+trial78 = [trialA trialB];
+trial78 = rescale(trial78,-1,1);
+
+% Trial 79
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(79)-1 & spiketime < eventtime(79));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(79) & spiketime < eventtime(79)+1);
+trialB = spiketime(Idx);
+end
+trial79 = [trialA trialB];
+trial79 = rescale(trial79,-1,1);
+
+% Trial 80
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(80)-1 & spiketime < eventtime(80));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(80) & spiketime < eventtime(80)+1);
+trialB = spiketime(Idx);
+end
+trial80 = [trialA trialB];
+trial80 = rescale(trial80,-1,1);
+
+% Trial 81
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(81)-1 & spiketime < eventtime(81));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(81) & spiketime < eventtime(81)+1);
+trialB = spiketime(Idx);
+end
+trial81 = [trialA trialB];
+trial81 = rescale(trial81,-1,1);
+
+% Trial 82
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(82)-1 & spiketime < eventtime(82));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(82) & spiketime < eventtime(82)+1);
+trialB = spiketime(Idx);
+end
+trial82 = [trialA trialB];
+trial82 = rescale(trial82,-1,1);
+
+% Trial 83
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(83)-1 & spiketime < eventtime(83));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(83) & spiketime < eventtime(83)+1);
+trialB = spiketime(Idx);
+end
+trial83 = [trialA trialB];
+trial83 = rescale(trial83,-1,1);
+
+% Trial 84
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(84)-1 & spiketime < eventtime(84));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(84) & spiketime < eventtime(84)+1);
+trialB = spiketime(Idx);
+end
+trial84 = [trialA trialB];
+trial84 = rescale(trial84,-1,1);
+
+% Trial 85
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(85)-1 & spiketime < eventtime(85));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(85) & spiketime < eventtime(85)+1);
+trialB = spiketime(Idx);
+end
+trial85 = [trialA trialB];
+trial85 = rescale(trial85,-1,1);
+
+% Trial 86
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(86)-1 & spiketime < eventtime(86));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(86) & spiketime < eventtime(86)+1);
+trialB = spiketime(Idx);
+end
+trial86 = [trialA trialB];
+trial86 = rescale(trial86,-1,1);
+
+% Trial 87
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(87)-1 & spiketime < eventtime(87));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(87) & spiketime < eventtime(87)+1);
+trialB = spiketime(Idx);
+end
+trial87 = [trialA trialB];
+trial87 = rescale(trial87,-1,1);
+
+% Trial 88
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(88)-1 & spiketime < eventtime(88));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(88) & spiketime < eventtime(88)+1);
+trialB = spiketime(Idx);
+end
+trial88 = [trialA trialB];
+trial88 = rescale(trial88,-1,1);
+
+% Trial 89
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(89)-1 & spiketime < eventtime(89));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(89) & spiketime < eventtime(89)+1);
+trialB = spiketime(Idx);
+end
+trial89 = [trialA trialB];
+trial89 = rescale(trial89,-1,1);
+
+% Trial 90
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(90)-1 & spiketime < eventtime(90));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(90) & spiketime < eventtime(90)+1);
+trialB = spiketime(Idx);
+end
+trial90 = [trialA trialB];
+trial90 = rescale(trial90,-1,1);
+
+% Trial 91
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(91)-1 & spiketime < eventtime(91));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(91) & spiketime < eventtime(91)+1);
+trialB = spiketime(Idx);
+end
+trial91 = [trialA trialB];
+trial91 = rescale(trial91,-1,1);
+
+% Trial 92
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(92)-1 & spiketime < eventtime(92));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(92) & spiketime < eventtime(92)+1);
+trialB = spiketime(Idx);
+end
+trial92 = [trialA trialB];
+trial92 = rescale(trial92,-1,1);
+
+% Trial 93
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(93)-1 & spiketime < eventtime(93));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(93) & spiketime < eventtime(93)+1);
+trialB = spiketime(Idx);
+end
+trial93 = [trialA trialB];
+trial93 = rescale(trial93,-1,1);
+
+% Trial 94
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(94)-1 & spiketime < eventtime(94));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(94) & spiketime < eventtime(94)+1);
+trialB = spiketime(Idx);
+end
+trial94 = [trialA trialB];
+trial94 = rescale(trial94,-1,1);
+
+% Trial 95
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(95)-1 & spiketime < eventtime(95));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(95) & spiketime < eventtime(95)+1);
+trialB = spiketime(Idx);
+end
+trial95 = [trialA trialB];
+trial95 = rescale(trial95,-1,1);
+
+% Trial 96
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(96)-1 & spiketime < eventtime(96));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(96) & spiketime < eventtime(96)+1);
+trialB = spiketime(Idx);
+end
+trial96 = [trialA trialB];
+trial96 = rescale(trial96,-1,1);
+
+% Trial 97
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(97)-1 & spiketime < eventtime(97));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(97) & spiketime < eventtime(97)+1);
+trialB = spiketime(Idx);
+end
+trial97 = [trialA trialB];
+trial97 = rescale(trial97,-1,1);
+
+% Trial 98
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(98)-1 & spiketime < eventtime(98));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(98) & spiketime < eventtime(98)+1);
+trialB = spiketime(Idx);
+end
+trial98 = [trialA trialB];
+trial98 = rescale(trial98,-1,1);
+
+% Trial 99
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(99)-1 & spiketime < eventtime(99));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(99) & spiketime < eventtime(99)+1);
+trialB = spiketime(Idx);
+end
+trial99 = [trialA trialB];
+trial99 = rescale(trial99,-1,1);
+
+% Trial 100
+for n = 1 : numel(neuron_spike)
+spiketime = neuron_spike{1,n};
+Idx = find(spiketime > eventtime(100)-1 & spiketime < eventtime(100));
+trialA = spiketime(Idx);
+Idx = find(spiketime > eventtime(100) & spiketime < eventtime(100)+1);
+trialB = spiketime(Idx);
+end
+trial100 = [trialA trialB];
+trial100 = rescale(trial100,-1,1);
+
+
+
+% Sum of Trial
+numArrays = 100;
+trial_sum = cell(numArrays,1);
+for n = 1:numArrays
+    trial_sum{n} = eval(["trial"+num2str(n)]);
+end
+
+
+% coeff = pca(Trial,'Algorithm','als')
+
+
+%grid on
+
